@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Gerenciamento de Patrimônios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro e Gerenciamento de Patrimônios</h1>
+        <form id="formPatrimonio">
+            <div class="form-row">
+                <label for="codigoBarras">Código de Barras:</label>
+                <input type="text" id="codigoBarras" name="codigoBarras" placeholder="Leia o código de barras" autofocus>
+            </div>
+            <div class="form-row">
+                <label for="descricaoPatrimonio">Descrição do Patrimônio:</label>
+                <input type="text" id="descricaoPatrimonio" name="descricaoPatrimonio" placeholder="Descrição do patrimônio">
+            </div>
+            <div class="form-row">
+                <label for="setor">Setor:</label>
+                <input type="text" id="setor" name="setor" placeholder="Setor do patrimônio">
+            </div>
+            <div class="form-row">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade">
+            </div>
+            <div class="form-row">
+                <label for="custoAquisicao">Custo de Aquisição:</label>
+                <input type="number" id="custoAquisicao" name="custoAquisicao" placeholder="Custo de aquisição">
+            </div>
+            <div class="form-row">
+                <label for="notaFiscal">Nota Fiscal:</label>
+                <input type="text" id="notaFiscal" name="notaFiscal" placeholder="Número da nota fiscal">
+            </div>
+            <div class="form-row">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" placeholder="Marca do patrimônio">
+            </div>
+            <div class="form-row">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" placeholder="Modelo do patrimônio">
+            </div>
+            <div class="form-row">
+                <label for="serie">Série:</label>
+                <input type="text" id="serie" name="serie" placeholder="Número de série">
+            </div>
+            <button type="button" id="btnCadastrar" onclick="cadastrarPatrimonio()">Cadastrar Patrimônio</button>
+            <button type="button" onclick="salvarAlteracao()" id="btnSalvarAlteracao" style="display: none;">Salvar Alteração</button>
+            <button type="button" id="btnPesquisar" onclick="pesquisarPatrimonio()">Pesquisar Patrimônio</button>
+            <button type="button" id="btnGerarRelatorio" onclick="gerarRelatorio()">Gerar Relatório Geral</button>
+            <button type="button" id="btnImprimirRelatorio" onclick="imprimirRelatorio()">Imprimir Relatório</button>
+            <button type="button" id="btnBackup" onclick="fazerBackup()">Fazer Backup</button>
+            <button type="button" id="btnImportarBackup" onclick="importarBackup()">Importar Backup</button>
+        </form>
+
+        <h2>Pesquisar por Setor</h2>
+        <form id="formPesquisaSetor">
+            <div class="form-row">
+                <label for="pesquisaSetor">Digite o Setor:</label>
+                <input type="text" id="pesquisaSetor" name="pesquisaSetor" placeholder="Digite o setor">
+            </div>
+            <button type="button" id="btnGerarRelatorioSetor" onclick="gerarRelatorioPorSetor()">Gerar Relatório por Setor</button>
+        </form>
+
+        <div class="resultado" id="resultado"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

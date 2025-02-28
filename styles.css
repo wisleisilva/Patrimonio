@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+label {
+    display: inline-block;
+    width: 150px; /* Largura fixa para os rótulos */
+    font-weight: bold;
+    margin-right: 10px;
+}
+input[type="text"], input[type="number"] {
+    width: calc(100% - 160px); /* Ajusta a largura dos campos */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+button:hover {
+    opacity: 0.9;
+}
+#btnCadastrar {
+    background-color: #007bff; /* Azul */
+}
+#btnPesquisar {
+    background-color: #007bff; /* Azul */
+}
+#btnGerarRelatorio {
+    background-color: #ffc107; /* Amarelo */
+}
+#btnImprimirRelatorio {
+    background-color: #28a745; /* Verde */
+}
+#btnExcluir {
+    background-color: #dc3545; /* Vermelho */
+}
+#btnBackup {
+    background-color: #007bff; /* Azul */
+}
+#btnImportarBackup {
+    background-color: #17a2b8; /* Azul Claro */
+}
+#btnGerarRelatorioSetor {
+    background-color: #007bff; /* Azul */
+}
+#btnAlterar {
+    background-color: #007bff; /* Azul */
+}
+#btnSalvarAlteracao {
+    background-color: #007bff; /* Azul */
+}
+.resultado {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+.acoes button {
+    flex: 1;
+}
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .printable, .printable * {
+        visibility: visible;
+    }
+    .printable {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .acoes, button {
+        display: none;
+    }
+}
